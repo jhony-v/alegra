@@ -21,6 +21,7 @@ const t = useTranslation();
 </script>
 <template>
   <form @submit.prevent="create">
+    <SubtitleText>{{ t("sellerScores") }}</SubtitleText>
     <InvoicePreviewTable :sellers="sellers" />
     <InvoiceTotalHighlighted
       class="my-5"

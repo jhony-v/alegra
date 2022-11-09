@@ -1,4 +1,5 @@
 import type { NewInvoiceCreatedResponse } from "@/core/models/invoice";
+import { invoiceCreated } from "@/mocks";
 import { CURRENCY } from "@/shared/constants";
 import dayjs from "dayjs";
 import { defineStore } from "pinia";
@@ -24,7 +25,7 @@ const useNewInvoiceStore = defineStore("newInvoice", {
         },
         observations: "",
       },
-      invoiceCreated: null,
+      invoiceCreated: invoiceCreated as any,
     };
   },
   getters: {

@@ -41,6 +41,9 @@ const t = useTranslation();
     textarea {
       @apply flex-1 bg-gray-200 rounded-md px-1;
     }
+    input {
+      @apply py-2;
+    }
   }
 }
 </style>

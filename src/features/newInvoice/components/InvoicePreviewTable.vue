@@ -16,10 +16,8 @@ const t = useTranslation();
 const data = computed(() => props.sellers as SellerImage[]);
 </script>
 <template>
-  <div
-    class="overflow-x-auto whitespace-nowrap bg-gray-50 p-1 rounded-md shadow-md"
-  >
-    <table class="table-auto w-full text-xs">
+  <div class="overflow-x-auto whitespace-nowrap">
+    <table class="table-flat">
       <thead>
         <tr>
           <th>N.</th>

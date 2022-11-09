@@ -5,8 +5,6 @@ import OverviewInvoiceCreated from "./sections/OverviewInvoiceCreated.vue";
 const t = useTranslation();
 </script>
 <template>
-  <div>
-    <OverviewBox :title="t('invoiceCreated.title')" />
-    <OverviewInvoiceCreated />
-  </div>
+  <OverviewBox :title="t('invoiceCreated.title')" />
+  <OverviewInvoiceCreated />
 </template>
