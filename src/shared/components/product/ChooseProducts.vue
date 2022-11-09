@@ -3,6 +3,7 @@ import useTranslation from "@/shared/composables/useTranslation";
 import { computed } from "vue";
 import type { JSONObject } from "@/shared/types";
 import PrimaryButton from "../ui/PrimaryButton.vue";
+import formatAmount from "@/shared/utils/formatAmount";
 
 const props = defineProps({
   items: {
@@ -105,7 +106,7 @@ function onDecrease<T>(item: T) {
             />
           </td>
           <td class="text-center">
-            {{ item.price }}
+            S/. {{ formatAmount({ amount: item.price }) }}
           </td>
           <td class="text-center">
             <input

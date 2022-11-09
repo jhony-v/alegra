@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import HelperText from "@/shared/components/ui/HelperText.vue";
 import useTranslation from "@/shared/composables/useTranslation";
+import formatAmount from "@/shared/utils/formatAmount";
 
 defineProps({
   client: {
@@ -47,7 +48,7 @@ const t = useTranslation();
       </HelperText>
       <h2 class="text-5xl my-4">
         <span class="text-gray-400">{{ currency.symbol }}</span>
-        {{ totalPaid }}
+        {{ formatAmount({ amount: totalPaid, currency: currency.currency }) }}
       </h2>
       <HelperText>
         <div class="w-2 h-2 inline-block ml-2 bg-orange-400 rounded-full"></div>
