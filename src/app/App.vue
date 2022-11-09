@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router";
-import useGetInitialSellers from "@/features/searchImages/composables/useGetInitialSellers";
 import GreetingsAnimation from "@/shared/components/ui/GreetingsAnimation.vue";
-import useGetInitialProducts from "@/features/application/composables/useGetInitialProducts";
-
-useGetInitialSellers();
-useGetInitialProducts();
+import { ServiceProvider } from "@/core/lib/serviceProvider";
+import AppWrapper from "./AppWrapper.vue";
 </script>
 
 <template>
   <GreetingsAnimation />
-  <RouterView />
+  <ServiceProvider>
+    <AppWrapper />
+  </ServiceProvider>
 </template>

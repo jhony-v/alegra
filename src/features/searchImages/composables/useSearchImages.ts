@@ -1,4 +1,4 @@
-import { getPublicImages } from "@/core/services/images";
+import { useServices } from "@/core/lib/serviceProvider";
 import useSearchImagesStore from "@/features/searchImages/store/useSearchImagesStore";
 import useTranslation from "@/shared/composables/useTranslation";
 import { ref } from "vue";
@@ -7,6 +7,7 @@ const MINIMUM_LENGTH = 3;
 
 export default function useSearchImages() {
   const store = useSearchImagesStore();
+  const services = useServices();
   const term = ref("");
   const t = useTranslation();
   const isInvalidTerm = ref(false);
@@ -22,7 +23,7 @@ export default function useSearchImages() {
     store.loadingTerm = true;
     store.canSearch = true;
     try {
-      const { data: images } = await getPublicImages(
+      const { data: images } = await services.images.getPublicImages(
         store.term,
         store.sellersLength
       );

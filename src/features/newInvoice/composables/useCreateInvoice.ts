@@ -1,5 +1,5 @@
+import { useServices } from "@/core/lib/serviceProvider";
 import type { CreateNewInvoice } from "@/core/models/invoice";
-import { createNewInvoice } from "@/core/services/invoice";
 import useSearchImagesStore from "@/features/searchImages/store/useSearchImagesStore";
 import { useRouter } from "vue-router";
 import useNewInvoiceStore from "../store/useNewInvoiceStore";
@@ -8,6 +8,7 @@ export default function useCreateInvoice() {
   const newInvoice = useNewInvoiceStore();
   const searchImage = useSearchImagesStore();
   const router = useRouter();
+  const services = useServices();
 
   const create = async () => {
     const invoice = newInvoice.invoice;
@@ -27,7 +28,7 @@ export default function useCreateInvoice() {
         dueDate: invoice.dueDate,
         observations: invoice.observations,
       };
-      const { data } = await createNewInvoice(payload);
+      const { data } = await services.invoice.createNewInvoice(payload);
       newInvoice.setInvoiceCreated(data);
       router.push("/invoice/created");
     } catch (error) {
