@@ -9,11 +9,11 @@
 </h1>
 
 <p align="center">
-<img src="./docs/preview-1.png" alt="preview" width="230" />
-<img src="./docs/preview-2.png" alt="preview" width="220" />
+<img src="./docs/preview-1.png" alt="preview" width="300" />
+<img src="./docs/preview-2.png" alt="preview" width="292" />
 </p>
 
-[Ver demo](https://frontend-alegra-challenge.netlify.app)
+[Ver demo](https://main.d3i8o9r76xprsx.amplifyapp.com/)
 
 ## Descripción 🚀
 
@@ -22,6 +22,14 @@ Para llevar a cabo este proyecto se realizó bocetos y la identificación del fl
 Con respecto a la arquitectura de la aplicación, se optó por un modelo basado en _features_ ya que permite separar la estructura en distintas capas y funcionalidades de acuerdo a lo que se requiere permitiendo escalarse con mayor facilidad y en caso de subdivir aplicaciones solo sería necesario desacoplar cierta parte de si misma.
 
 La estructura de la aplicación es la siguiente:
+
+- app: Punto de entrada para la aplicación en general.
+- config: Configuraciones generales para varias fuentes de datos externas.
+- router: Carpeta para crear las rutas de toda la aplicación.
+- mocks: Aveces se desea tener datos para poder realizar pruebas de recursos externos, esta carpeta esta diseñada para cumplir con tal función.
+- core: Carpeta destinada a manipular fuente de datos externa o archivos que personalizan la aplicación para que pueda funcionar.
+- shared: Recurso de componentes, utilidades, responsables de la UI, sin mayor lógica de negocio.
+- features: Cada carpeta es independiente pero puede compartir funcionalidades con otros módulos. Una de las principales ventajas con este enfoque es que tenemos un conjunto de funcionalidades que construyen una funcionalidad en particular, teniendo la habilidad de escalar independientemente.
 
 ```
 ├───app
@@ -75,7 +83,7 @@ Las principales tecnologías usadas para la implementación del proyecto son las
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
-![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 - Framework: **Vue 3**
 - Estilos: **TailwindCSS, Sass**

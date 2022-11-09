@@ -1,5 +1,5 @@
 import { googleImagesApi } from "@/config/api";
-import { GOOGLE_IMAGE_API_KEY } from "@/config/constants";
+import { GOOGLE_IMAGE_API_KEY } from "@/config/environments";
 import { images } from "@/mocks";
 
 export const getPublicImages = async (term: string, total = 100) => {

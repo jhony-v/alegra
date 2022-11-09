@@ -38,8 +38,8 @@ const t = useTranslation();
         {{ client.email }}
       </HelperText>
       <HelperText>
-        {{ client.address.address }} -
-        {{ client.address.city }}
+        {{ client.address?.address }} -
+        {{ client.address?.city }}
       </HelperText>
     </div>
     <div class="inline-block rounded-md bg-gray-50 ml-4 py-2 px-4">

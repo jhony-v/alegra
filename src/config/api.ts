@@ -5,7 +5,7 @@ import {
   ALEGRA_EMAIL,
   ALEGRA_TOKEN,
   googleImageApiUrl,
-} from "./constants";
+} from "./environments";
 
 const Authorization = encode(`${ALEGRA_EMAIL}:${ALEGRA_TOKEN}`, true);
 
