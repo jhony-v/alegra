@@ -1,0 +1,5 @@
+.gitignore
+node_modules
+tailwind.config.cjs
+postcss.config.js
+commitlint.config.js

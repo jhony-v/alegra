@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: rgb(80, 255, 235);
+    --primary-light: rgb(109, 243, 227);
+    --primary-dark: rgb(19, 192, 171);
+  }
+  
+
+  body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    @apply bg-gray-100
+  }
+
+  input {
+    background: transparent;
+    outline: none;
+    border: none;
+  }
+
+  button {
+    outline: none;
+    border: none;
+  }
