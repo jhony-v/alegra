@@ -1,6 +1,7 @@
 import type { CreateNewInvoice } from "@/core/models/invoice";
 import { createNewInvoice } from "@/core/services/invoice";
 import useSearchImagesStore from "@/features/searchImages/store/useSearchImagesStore";
+import { invoiceCreated } from "@/mocks";
 import { useRouter } from "vue-router";
 import useNewInvoiceStore from "../store/useNewInvoiceStore";
 
@@ -28,7 +29,7 @@ export default function useCreateInvoice() {
         observations: invoice.observations,
       };
       const { data } = await createNewInvoice(payload);
-      newInvoice.setInvoiceCreated(data);
+      newInvoice.setInvoiceCreated(data || invoiceCreated);
       router.push("/invoice/created");
     } catch (error) {
       if (import.meta.env.DEV) {

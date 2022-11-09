@@ -6,4 +6,8 @@ export interface Customer {
   identification?: string;
   mobile: string;
   fax: string;
+  address: {
+    address: string;
+    city: string;
+  };
 }

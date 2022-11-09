@@ -27,6 +27,9 @@ const useNewInvoiceStore = defineStore("newInvoice", {
       invoiceCreated: null,
     };
   },
+  getters: {
+    existsInvoiceCreated: (state) => state.invoiceCreated !== null,
+  },
   actions: {
     toggleShowNewInvoice() {
       this.showNewInvoice = !this.showNewInvoice;

@@ -31,6 +31,13 @@ const i18n = createI18n({
         hide: "Ocultar",
         show: "Mostrar",
         generalInformation: "Datos generales",
+        currency: "Moneda",
+        exchangeRate: "Tipo de cambio",
+        total: "Total",
+        totalPaid: "Total pagado",
+        balance: "Balance",
+        status: "Estatus",
+        decimalPrecision: "Decimales",
       },
       newInvoice: {
         client: "Cliente",
@@ -38,6 +45,10 @@ const i18n = createI18n({
         dueDate: "Fecha de vencimiento",
         observations: "Observaciones",
         currency: "Moneda",
+      },
+      invoiceCreated: {
+        title:
+          "!Felicitaciones, Acabas de generar una nueva factura con Alegra!",
       },
       product: {
         products: "Productos",

@@ -49,8 +49,10 @@ La estructura de la aplicación es la siguiente:
 ├───shared
 │   ├───components
 │   │   ├───ui
+│   │   ├───product
 │   │   ├───seller
 │   ├───composables
+│   ├───types
 │   └───utils
 ```
 
@@ -102,8 +104,8 @@ $ npm run build
 - La arquitectura de la aplicación esta basada en un modelo escalable que permite la incorporación de nuevas funcionalidades y manteniblidad en el futuro.
 - Las variables de entorno fueron subidas al repositorio en caso de querer realizarse las pruebas de manera local.
 - Correo y contraseña de la cuenta de Alegra:
-  - jhonyvega.dev@gmail.com
-  - jhonyvegadev
+  - **jhonyvega.dev@gmail.com**
+  - **jhonyvegadev**
 
 ## Funcionalidades desarrolladas 💻
 

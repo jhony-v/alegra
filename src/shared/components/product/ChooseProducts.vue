@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import useTranslation from "@/shared/composables/useTranslation";
 import { computed } from "vue";
+import type { JSONObject } from "@/shared/types";
 import PrimaryButton from "../ui/PrimaryButton.vue";
 
 const props = defineProps({
@@ -23,12 +24,12 @@ const emit = defineEmits(["update:modelValue"]);
 
 const models = computed(() => {
   const modelValue = props.modelValue;
-  return modelValue.reduce((previous: any, current: any) => {
+  return modelValue.reduce((previous: JSONObject, current: any) => {
     previous[current.id] = current;
     return previous;
   }, {}) as any;
 });
-const data = computed(() => props.items as any[]);
+const data = computed(() => props.items as JSONObject[]);
 const modelIds = computed(() => new Set([...props.modelValue.map(getId)]));
 
 function getId<T>(item: T) {

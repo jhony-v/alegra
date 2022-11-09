@@ -29,7 +29,7 @@ const useSearchImagesStore = defineStore("searchImages", {
     setTerm(term: string) {
       this.term = term;
     },
-    updateSellerScore(sellerId: string) {
+    updateSellerScore(sellerId: number) {
       const sellerIndex = this.sellers.findIndex(
         (currentSeller) => currentSeller.id === sellerId
       );
