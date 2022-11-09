@@ -2,17 +2,8 @@ import type { Customer } from "./customer";
 import type { Product } from "./product";
 import type { Seller } from "./seller";
 
-interface Item {
-  id: number;
-  name: string;
-  discount: number;
-  observations: string;
-  price: number;
-  quantity: number;
-}
-
 export interface CreateNewInvoice {
-  items: Item[];
+  items: Product[];
   dueDate: string;
   date: string;
   observations?: string;
@@ -25,19 +16,27 @@ export interface CreateNewInvoice {
   currency: string;
 }
 
+export interface Retention {
+  id: number;
+  name: string;
+  percentage: number;
+  amount: number;
+}
+
 export interface NewInvoiceCreatedResponse {
   id: number;
-  dueDate: string;
   date: string;
+  dueDate: string;
   observations?: string;
+  anotation?: string;
+  termsConditions?: string;
+  status: string;
   numberTemplate: Array<{
     id: number;
     prefix: string;
     number: number;
     text: string;
   }>;
-  termsConditions?: string;
-  anotation?: string;
   currency: {
     code: string;
     symbol: string;
@@ -49,7 +48,8 @@ export interface NewInvoiceCreatedResponse {
   totalPaid: number;
   balance: number;
   decimalPrecision: number;
-  items: Array<Product & { reference: string }>;
+  retentions: Retention[];
+  items: Array<Product & { reference: string; tax: any }>;
   costCenter: {
     id: string;
     code: string;

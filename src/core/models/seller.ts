@@ -3,7 +3,7 @@ export interface Seller {
   name: string;
   identification: string;
   observations?: string;
-  status: "active" | "inactive";
+  status?: "active" | "inactive";
 }
 
 export interface SellerImage extends Seller {

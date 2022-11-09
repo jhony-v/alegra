@@ -20,6 +20,7 @@ const i18n = createI18n({
         respectiveConnector: "tú has sido el respectivo",
         createInvoiceNow: "ahora puedes crear tu siguiente",
       },
+      sellerScores: "Puntaje de vendedores",
       invoice: "Factura",
       common: {
         customer: "Cliente",
@@ -38,6 +39,7 @@ const i18n = createI18n({
         balance: "Balance",
         status: "Estatus",
         decimalPrecision: "Decimales",
+        termsConditions: "Terminos y condiciones",
       },
       newInvoice: {
         client: "Cliente",
@@ -49,10 +51,14 @@ const i18n = createI18n({
       invoiceCreated: {
         title:
           "!Felicitaciones, Acabas de generar una nueva factura con Alegra!",
+        invoiceFor: "Factura para",
+        complete: "Cerrar esta página y volver al inicio",
       },
       product: {
         products: "Productos",
         name: "Nombre",
+        description: "Descripción",
+        reference: "Referencia",
         image: "Imagen",
         choose: "Elegir",
         price: "Precio",

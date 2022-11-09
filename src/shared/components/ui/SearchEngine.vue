@@ -32,7 +32,7 @@ const onInput = (ev: Event) => {
       :value="modelValue"
       @input="onInput"
     />
-    <PrimaryButton type="button">
+    <PrimaryButton type="submit">
       <span class="mr-1">{{ t("searchLabel") }}</span>
       <Magnify />
     </PrimaryButton>

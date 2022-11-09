@@ -1,5 +1,6 @@
 import type { PublicImage, Seller } from "@/core/models/seller";
 import type { Product } from "@/core/models/product";
+import type { NewInvoiceCreatedResponse } from "@/core/models/invoice";
 
 export const sellers: Seller[] = [
   {
@@ -119,7 +120,7 @@ export const products: Product[] = [
   },
 ];
 
-export const invoiceCreated = {
+export const invoiceCreated: NewInvoiceCreatedResponse = {
   id: 2,
   date: "2015-11-15",
   dueDate: "2015-12-15",
@@ -170,12 +171,11 @@ export const invoiceCreated = {
     exchangeRate: 3100,
   },
   seller: {
-    id: "52",
+    id: 52,
     name: "Carmen López",
     identification: "",
     observations: "",
   },
-  priceList: {},
   total: 632,
   totalPaid: 500,
   balance: 132,

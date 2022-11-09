@@ -96,7 +96,7 @@ function onDecrease<T>(item: T) {
       </thead>
       <tbody>
         <tr v-for="item in data" :key="renderId(item)">
-          <td>{{ renderId(item) }}</td>
+          <td class="py-2">{{ renderId(item) }}</td>
           <td>{{ item.name }}</td>
           <td>
             <img :src="item.image" class="w-6 h-6 rounded-sm object-cover" />
