@@ -23,3 +23,13 @@ button {
     @apply border-b py-3;
   }
 }
+
+.fade-up {
+  animation: 0.5s fade-up 1;
+  @keyframes fade-up {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+  }
+}

@@ -20,12 +20,12 @@ const t = useTranslation();
     <div class="flex-1 p-6">
       <router-link
         to="/invoice/add"
-        class="text-blue-600 mb-4 inline-block text-sm font-bold"
+        class="text-primary-dark mb-2 inline-block text-xs font-bold"
       >
         {{ t("openFullScreen") }}
       </router-link>
       <Suspense>
-        <CreateNewInvoice>
+        <CreateNewInvoice class="fade-up">
           <template #actions>
             <HideCreateNewInvoiceButton />
             <CreateNewInvoiceButton />

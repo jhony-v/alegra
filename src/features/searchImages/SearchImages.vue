@@ -23,7 +23,7 @@ useSubscribeNewWinner();
     <SearchImageEngine />
     <div class="md:mt-20 mx-4">
       <ToggleInvoicedTab />
-      <InvoicePresenter v-if="!searchImages.canSearch" />
+      <InvoicePresenter class="fade-up" v-if="!searchImages.canSearch" />
       <Suspense v-else>
         <ListSellerImages />
         <template #fallback>

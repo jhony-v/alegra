@@ -30,8 +30,9 @@ const onResetAll = () => {
       :date="invoice?.date"
       :total-paid="invoice?.totalPaid"
       :currency="invoice?.currency"
+      class="fade-up"
     />
-    <CardBox>
+    <CardBox class="fade-up">
       <div class="flex-1 grid gap-5">
         <div>
           <SubtitleText>{{ t("product.products") }}</SubtitleText>
