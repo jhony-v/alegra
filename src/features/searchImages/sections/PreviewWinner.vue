@@ -17,7 +17,7 @@ const t = useTranslation();
 <template>
   <div class="md:flex w-full h-full">
     <InvoiceWinnerBanner />
-    <div class="flex-1 p-6">
+    <div class="flex-1 p-6 md:p-12">
       <router-link
         to="/invoice/add"
         class="text-primary-dark mb-2 inline-block text-xs font-bold"

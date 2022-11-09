@@ -11,12 +11,18 @@ defineProps({
   disabled: {
     type: Boolean,
   },
+  selected: {
+    type: Boolean,
+  },
 });
 
 defineEmits(["like"]);
 </script>
 <template>
-  <CardBox :aria-disabled="disabled">
+  <CardBox
+    :aria-disabled="disabled"
+    :class="selected ? 'border-2 bg-gray-100 border-primary' : ''"
+  >
     <img
       v-if="seller.image"
       :src="seller.image"

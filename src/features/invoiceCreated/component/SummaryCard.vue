@@ -24,7 +24,7 @@ const t = useTranslation();
 </script>
 <template>
   <div
-    class="bg-white rounded-xl -my-16 mb-5 shadow-lg p-3 flex sm:inline-flex"
+    class="bg-white rounded-xl -my-16 mb-5 shadow-lg p-8 flex sm:inline-flex"
   >
     <div class="py-2 flex-1">
       <HelperText>

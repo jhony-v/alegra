@@ -29,7 +29,7 @@ const i18n = createI18n({
         sellers: "vendedores",
         cancel: "Cancelar",
         create: "Crear",
-        hide: "Ocultar",
+        hide: "Minimizar",
         show: "Mostrar",
         generalInformation: "Datos generales",
         currency: "Moneda",

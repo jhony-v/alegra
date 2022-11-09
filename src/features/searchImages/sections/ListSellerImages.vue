@@ -16,12 +16,16 @@ const { increment } = useIncrementSellerScore();
   <section v-else-if="store.error">
     <h1>Error al obtener resultados</h1>
   </section>
-  <section v-else class="grid gap-3 sm:grid-cols-3 md:grid-cols-4 flex-1">
+  <section
+    v-else
+    class="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex-1"
+  >
     <SellerCard
       v-for="seller in sellers"
       :key="seller.id"
       :seller="seller"
       :disabled="existsWinner"
+      :selected="seller.id === store.winningSeller?.id"
       @like="increment"
     />
   </section>

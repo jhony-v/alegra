@@ -10,7 +10,7 @@ const t = useTranslation();
 <template>
   <div v-if="!newInvoice.showNewInvoice && searchImages.existsWinner">
     <button
-      class="text-sm font-bold mb-4 flex gap-2 items-center"
+      class="text-sm font-bold mb-4 flex gap-2 items-center animate-pulse"
       @click="newInvoice.toggleShowNewInvoice"
     >
       <FolderOutline class="text-2xl" />

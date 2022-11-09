@@ -8,6 +8,7 @@ const t = useTranslation();
 <template>
   <button
     class="font-bold"
+    type="button"
     @click="newInvoice.toggleShowNewInvoice"
     :title="t('common.hide')"
   >

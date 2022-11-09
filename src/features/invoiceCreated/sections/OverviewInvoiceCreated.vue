@@ -33,13 +33,13 @@ const onResetAll = () => {
       class="fade-up"
     />
     <CardBox class="fade-up">
-      <div class="flex-1 grid gap-5">
+      <div class="flex-1 grid gap-5 p-4">
         <div>
           <SubtitleText>{{ t("product.products") }}</SubtitleText>
           <TableItemsBought :items="invoice?.items" />
         </div>
         <div>
-          <SubtitleText>{{ t("sellers") }}</SubtitleText>
+          <SubtitleText>{{ t("common.sellers") }}</SubtitleText>
           <InvoicePreviewTable :sellers="sellers" />
         </div>
         <div v-if="invoice?.termsConditions">

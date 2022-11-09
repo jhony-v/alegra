@@ -1,6 +1,5 @@
 import { getPublicImages } from "@/core/services/images";
 import useSearchImagesStore from "@/features/searchImages/store/useSearchImagesStore";
-import useToast from "@/shared/composables/useToast";
 import useTranslation from "@/shared/composables/useTranslation";
 import { ref } from "vue";
 
@@ -9,16 +8,17 @@ const MINIMUM_LENGTH = 3;
 export default function useSearchImages() {
   const store = useSearchImagesStore();
   const term = ref("");
-  const createToast = useToast();
   const t = useTranslation();
+  const isInvalidTerm = ref(false);
 
   const search = async () => {
-    const value = term.value.trim();
-    if (value.length < MINIMUM_LENGTH) {
-      createToast(t("invalidTermLength"));
+    const invalidLength = term.value.trim().length < MINIMUM_LENGTH;
+    if (invalidLength) {
+      isInvalidTerm.value = true;
       return;
     }
-    store.setTerm(value);
+    store.setTerm(term.value);
+    isInvalidTerm.value = false;
     store.loadingTerm = true;
     store.canSearch = true;
     try {
@@ -37,6 +37,7 @@ export default function useSearchImages() {
   };
 
   return {
+    isInvalidTerm,
     search,
     term,
   };

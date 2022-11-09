@@ -10,6 +10,12 @@ defineProps({
   modelValue: {
     type: String,
   },
+  invalid: {
+    type: Boolean,
+  },
+  invalidMessage: {
+    type: String,
+  },
 });
 
 const t = useTranslation();
@@ -25,16 +31,21 @@ const onInput = (ev: Event) => {
     class="bg-white rounded-xl p-4 flex items-center shadow-md"
     @submit.prevent="$emit('search', modelValue)"
   >
-    <input
-      :placeholder="placeholder"
-      class="flex-1 px-3"
-      spellcheck="false"
-      :value="modelValue"
-      @input="onInput"
-    />
+    <div class="flex-1 px-3">
+      <input
+        :placeholder="placeholder"
+        class="w-full"
+        spellcheck="false"
+        :value="modelValue"
+        @keyup="onInput"
+      />
+      <span v-if="invalid" class="text-red-500 text-xs font-bold">
+        {{ invalidMessage }}
+      </span>
+    </div>
     <PrimaryButton type="submit">
       <span class="mr-1">{{ t("searchLabel") }}</span>
-      <Magnify />
+      <Magnify class="text-2xl" />
     </PrimaryButton>
   </form>
 </template>
