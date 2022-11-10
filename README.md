@@ -128,8 +128,8 @@ $ npm run build
 
 ## Consideraciones 🙌
 
-- Google Images API no permite traer imagenes de cliente, por ese motivo se uso la api de [https://unsplash.com/](Unsplash) con la misma funcionalidad [https://unsplash.com/developers](https://unsplash.com/developers).
-- Los sistemas de API de Alegra cuentan con un sistema que captura datos falsos, esto es por motivos de prueba y ciertas restricciones al integrarlo para ⚠️ acceso a los clientes 😿. A pesar de aquello la infraestructura está lista para el uso de los servicios sin mayor dificultad.
+- Google Images API no permite traer imagenes de cliente, por ese motivo se uso la api de [Unsplash](https://unsplash.com/) con la misma funcionalidad [https://unsplash.com/developers](https://unsplash.com/developers).
+- Los sistemas de API de Alegra cuentan con un sistema que captura datos falsos, esto es por motivos de prueba y ciertas restricciones a los clientes frontend distintos al dominio😿. A pesar de aquello la infraestructura está lista para el uso de los servicios sin mayor dificultad.
 - La arquitectura de la aplicación esta basada en un modelo escalable que permite la incorporación de nuevas funcionalidades y manteniblidad en el futuro.
 - Las variables de entorno fueron subidas al repositorio en caso de querer realizarse las pruebas de manera local.
 - Correo y contraseña de la cuenta de Alegra:
@@ -144,6 +144,7 @@ $ npm run build
 - [x] Mostrar detalle del puntaje total y por cada vendedor.
 - [x] Permitir crear una nueva factura por el vendedor ganador.
 - [x] Asociar un cliente y seleccionar productos.
+- [x] Previsualizar la imagen del vendedor en pantalla completa.
 - [x] Mostrar factura creada.
 
 ##
