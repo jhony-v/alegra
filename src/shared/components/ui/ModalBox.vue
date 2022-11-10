@@ -1,3 +1,16 @@
+<script lang="ts" setup>
+defineProps({
+  open: {
+    type: Boolean,
+  },
+  title: {
+    type: String,
+  },
+  autoWidth: {
+    type: Boolean,
+  },
+});
+</script>
 <template>
   <teleport to="body">
     <transition name="modal-body">
@@ -10,7 +23,8 @@
         class="fixed top-0 left-0 z-50 flex w-full h-full overflow-y-auto bg-opacity-40 bg-black backdrop-modal"
       >
         <div
-          class="m-auto overflow-hidden bg-white rounded-lg w-11/12 sm:w-2/3 shadow-2xl"
+          class="m-auto overflow-hidden bg-white rounded-lg shadow-2xl"
+          :class="[autoWidth ? '' : 'w-11/12 sm:w-2/3']"
         >
           <div class="bg-white flex" aria-controls="true">
             <slot></slot>
@@ -20,17 +34,6 @@
     </transition>
   </teleport>
 </template>
-
-<script lang="ts" setup>
-defineProps({
-  open: {
-    type: Boolean,
-  },
-  title: {
-    type: String,
-  },
-});
-</script>
 
 <style lang="scss" scoped>
 .backdrop-modal {

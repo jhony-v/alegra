@@ -16,7 +16,7 @@ defineProps({
   },
 });
 
-defineEmits(["like"]);
+defineEmits(["like", "previewImage"]);
 </script>
 <template>
   <CardBox
@@ -26,8 +26,9 @@ defineEmits(["like"]);
     <img
       v-if="seller.image"
       :src="seller.image"
-      class="w-24 h-24 rounded-xl bg-gray-50"
+      class="w-24 h-24 rounded-xl bg-gray-50 cursor-pointer"
       :alt="seller.observations || ''"
+      @click="$emit('previewImage')"
     />
     <div class="flex-1">
       <h3 class="font-semibold text-sm">{{ seller.name }}</h3>

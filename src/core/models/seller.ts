@@ -13,4 +13,5 @@ export interface SellerImage extends Seller {
 
 export interface PublicImage {
   image: string;
+  description?: string;
 }

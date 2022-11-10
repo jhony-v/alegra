@@ -1,26 +1,25 @@
-import { googleImagesApi } from "@/config/api";
-import { GOOGLE_IMAGE_API_KEY } from "@/config/envs";
-import { images } from "@/mocks";
+import { unspashApi } from "@/config/api/unsplash";
+import { UNSPLASH_API_KEY } from "@/config/envs";
+import type { UnsplashSearchPhotoResponse } from "@/shared/types";
 
-export const getPublicImages = async (term: string, total = 100) => {
-  try {
-    const params = new URLSearchParams({
-      q: term,
-      tbm: "isch",
-      num: String(total),
-      api_key: GOOGLE_IMAGE_API_KEY,
-    });
-    const response = await googleImagesApi.get(`/search?${params}`);
-    const imagesResults = (response.data?.images_results || []).slice(0, total);
-    const normalizeImages = imagesResults.map(
-      (result: { thumbnail: string }) => {
-        return {
-          image: result.thumbnail,
-        };
-      }
-    );
-    return { data: normalizeImages };
-  } catch {
-    return { data: images };
-  }
+export const getPublicImages = async (query: string, total = 10) => {
+  const response = await search({ query, total });
+  const normalizeImages = response.data.results.map((image) => {
+    return {
+      image: image.urls.small,
+      description: image.description,
+    };
+  });
+  return { data: normalizeImages };
 };
+
+// internal wrapper for searching photos
+function search({ query, total }: { query: string; total: number }) {
+  const params = new URLSearchParams({
+    query,
+    per_page: String(total),
+    client_id: UNSPLASH_API_KEY,
+  });
+  const path = `/search/photos?${params}`;
+  return unspashApi.get<UnsplashSearchPhotoResponse>(path);
+}

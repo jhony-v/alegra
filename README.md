@@ -21,6 +21,15 @@ Para llevar a cabo este proyecto se realizó bocetos y la identificación del fl
 
 Con respecto a la arquitectura de la aplicación, se optó por un modelo basado en _features_ ya que permite separar la estructura en distintas capas y funcionalidades de acuerdo a lo que se requiere permitiendo escalarse con mayor facilidad y en caso de subdivir aplicaciones solo sería necesario desacoplar cierta parte de si misma.
 
+El desarrollo fué implementado teniendo en cuenta los siguientes puntos:
+
+- Accesibilidad
+- UX
+- Mantenibilidad
+- Escalabilidad
+- Calidad
+- Arquitecura
+
 La estructura de la aplicación es la siguiente:
 
 - app: Punto de entrada para la aplicación en general.
@@ -119,7 +128,8 @@ $ npm run build
 
 ## Consideraciones 🙌
 
-- Los sistemas de API cuentan con un sistema que captura datos falsos, esto es por motivos de prueba y ciertas restricciones al integrar el API que bloqueaban ⚠️ el acceso a los clientes 😿. A pesar de aquello la infraestructura está lista para el uso de los servicios sin mayor dificultad.
+- Google Images API no permite traer imagenes de cliente, por ese motivo se uso la api de [https://unsplash.com/](Unsplash) con la misma funcionalidad [https://unsplash.com/developers](https://unsplash.com/developers).
+- Los sistemas de API de Alegra cuentan con un sistema que captura datos falsos, esto es por motivos de prueba y ciertas restricciones al integrarlo para ⚠️ acceso a los clientes 😿. A pesar de aquello la infraestructura está lista para el uso de los servicios sin mayor dificultad.
 - La arquitectura de la aplicación esta basada en un modelo escalable que permite la incorporación de nuevas funcionalidades y manteniblidad en el futuro.
 - Las variables de entorno fueron subidas al repositorio en caso de querer realizarse las pruebas de manera local.
 - Correo y contraseña de la cuenta de Alegra:

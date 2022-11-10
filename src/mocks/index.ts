@@ -1,4 +1,4 @@
-import type { PublicImage, Seller } from "@/core/models/seller";
+import type { Seller } from "@/core/models/seller";
 import type { Product } from "@/core/models/product";
 import type { NewInvoiceCreatedResponse } from "@/core/models/invoice";
 import type { Customer } from "@/core/models/customer";
@@ -39,33 +39,6 @@ export const sellers: Seller[] = [
     identification: "5.241.10",
     name: "Gerardo Zuckerberg",
     status: "active",
-  },
-];
-
-export const images: PublicImage[] = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1667716011862-630916a74d68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1667853005094-085cd3671c68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1667853005377-9badf481e5f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1667842474031-8a0ba604df48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=377&q=80",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1667912969608-b830b80a49da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1667860919782-5a057220ec7f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
   },
 ];
 

@@ -1,17 +1,20 @@
 <script lang="ts" setup>
+import { computed } from "vue";
 import SellerCard from "@/shared/components/seller/SellerCard.vue";
 import LoadingSpinner from "@/shared/components/ui/LoadingSpinner.vue";
 import useTranslation from "@/shared/composables/useTranslation";
-import { computed } from "vue";
+import PreviewSellerImageModal from "../components/PreviewSellerImageModal.vue";
 import useGetSellers from "../composables/useGetSellers";
 import useIncrementSellerScore from "../composables/useIncrementSellerScore";
+import usePreviewSellerImage from "../composables/usePreviewSellerImage";
 import useSearchImagesStore from "../store/useSearchImagesStore";
 
-const store = useSearchImagesStore();
-const sellers = useGetSellers();
-const existsWinner = computed(() => store.existsWinner);
-const { increment } = useIncrementSellerScore();
 const t = useTranslation();
+const sellers = useGetSellers();
+const store = useSearchImagesStore();
+const { increment } = useIncrementSellerScore();
+const previewSellerImage = usePreviewSellerImage();
+const existsWinner = computed(() => store.existsWinner);
 </script>
 <template>
   <LoadingSpinner v-if="store.loadingTerm" />
@@ -26,8 +29,16 @@ const t = useTranslation();
       :disabled="existsWinner"
       :selected="seller.id === store.winningSeller?.id"
       @like="increment"
+      @preview-image="previewSellerImage.select(seller)"
     />
   </section>
+  <PreviewSellerImageModal
+    :disabled="existsWinner"
+    :open="previewSellerImage.open"
+    :seller="previewSellerImage.seller"
+    @close="previewSellerImage.close"
+    @like="increment"
+  />
 </template>
 <style lang="scss" scoped>
 .seller-images {

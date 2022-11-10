@@ -1,2 +1,2 @@
 export * from "./alegra";
-export * from "./goggleImages";
+export * from "./unsplash";
