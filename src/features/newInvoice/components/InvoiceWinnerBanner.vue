@@ -9,6 +9,8 @@ const store = useSearchImagesStore();
 <template>
   <div
     class="bg-primary-dark md:w-1/4 md:px-8 p-4 md:py-16 text-lg text-white rounded-r-sm"
+    tabindex="0"
+    role="banner"
   >
     <BrandLogo class="mb-4" />
     {{ t("banner.hello") }}

@@ -1,12 +1,15 @@
 import { createI18n } from "vue-i18n";
 import es from "./translations/es";
+import en from "./translations/en";
+import { LANGUAGE } from "./languages";
 
 const i18n = createI18n({
   legacy: false,
-  fallbackLocale: "es",
-  locale: "es",
+  fallbackLocale: LANGUAGE.es,
+  locale: LANGUAGE.es,
   messages: {
     es,
+    en,
   },
 });
 

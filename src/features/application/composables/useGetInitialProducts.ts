@@ -10,6 +10,6 @@ export default function useGetInitialProducts() {
 
   mounted(async () => {
     const { data: products } = await services.product.getAllProducts();
-    store.products = products;
+    store.setProducts(products);
   });
 }

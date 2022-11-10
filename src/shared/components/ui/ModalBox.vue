@@ -3,14 +3,16 @@
     <transition name="modal-body">
       <div
         v-if="open"
+        role="dialog"
+        aria-labelledby="Modal presentation"
+        aria-describedby="Modal in full screen"
+        aria-modal="true"
         class="fixed top-0 left-0 z-50 flex w-full h-full overflow-y-auto bg-opacity-40 bg-black backdrop-modal"
       >
         <div
-          role="alert"
-          aria-label="Modal"
           class="m-auto overflow-hidden bg-white rounded-lg w-11/12 sm:w-2/3 shadow-2xl"
         >
-          <div class="bg-white flex">
+          <div class="bg-white flex" aria-controls="true">
             <slot></slot>
           </div>
         </div>

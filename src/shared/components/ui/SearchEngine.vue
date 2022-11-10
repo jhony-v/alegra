@@ -27,15 +27,17 @@ const onInput = (ev: Event) => {
 </script>
 <template>
   <form
-    aria-describedby="buscar imagenes"
+    :aria-describedby="placeholder"
     class="bg-white rounded-xl p-4 flex items-center shadow-md"
     @submit.prevent="$emit('search', modelValue)"
   >
     <div class="flex-1 px-3">
       <input
         :placeholder="placeholder"
-        class="w-full"
+        id="search-engine"
         spellcheck="false"
+        autocomplete="off"
+        class="w-full"
         :value="modelValue"
         @keyup="onInput"
       />
@@ -45,7 +47,7 @@ const onInput = (ev: Event) => {
     </div>
     <PrimaryButton type="submit">
       <span class="mr-1">{{ t("searchLabel") }}</span>
-      <Magnify class="text-2xl" />
+      <Magnify class="text-2xl" aria-hidden="true" />
     </PrimaryButton>
   </form>
 </template>

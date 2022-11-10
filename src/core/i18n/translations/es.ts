@@ -1,10 +1,11 @@
-const es = {
+export default {
   score: "Puntos",
   missing: "Faltante",
   searchNav: {
     title: "Imágenes del mundo - Alegra",
     placeholder: "Busca tus imagenes mas preferidas...",
   },
+  mainNavigation: "Navegación principal",
   searchLabel: "Buscar",
   banner: {
     hello: "Hola",
@@ -56,9 +57,14 @@ const es = {
     price: "Precio",
     quantity: "Cantidad",
   },
+  error: {
+    gettingImages: "Error al obtener resultados",
+  },
   openFullScreen: "Ver en pantalla completa",
   invalidTermLength: "Ingrese más palabras para su búsqueda",
   newWinner: "Un nuevo vendedor a ganado, aquí te mostramos la información",
+  languages: {
+    es: "Español",
+    en: "Ingles",
+  },
 };
-
-export default es;

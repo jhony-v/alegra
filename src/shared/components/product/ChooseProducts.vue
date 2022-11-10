@@ -96,7 +96,7 @@ function onDecrease<T>(item: T) {
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in data" :key="renderId(item)">
+        <tr tabindex="0" v-for="item in data" :key="renderId(item)">
           <td class="py-2 text-center">{{ renderId(item) }}</td>
           <td class="text-center">{{ item.name }}</td>
           <td class="text-center">

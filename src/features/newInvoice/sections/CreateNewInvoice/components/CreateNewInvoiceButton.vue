@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import PrimaryButton from "@/shared/components/ui/PrimaryButton.vue";
 import useTranslation from "@/shared/composables/useTranslation";
-import useResetNewInvoice from "@/features/newInvoice/composables/useResetNewInvoice";
 import LoadingSpinner from "@/shared/components/ui/LoadingSpinner.vue";
 import useNewInvoiceStore from "@/features/newInvoice/store/useNewInvoiceStore";
 
-const { reset } = useResetNewInvoice();
 const store = useNewInvoiceStore();
 const t = useTranslation();
 </script>

@@ -4,12 +4,12 @@ import useApplicationStore from "@/features/application/store/useApplicationStor
 import ChooseProducts from "@/shared/components/product/ChooseProducts.vue";
 import SubtitleText from "@/shared/components/ui/SubtitleText.vue";
 import useTranslation from "@/shared/composables/useTranslation";
-import useGetSellers from "../../../searchImages/composables/useGetSellers";
-import useSearchImagesStore from "../../../searchImages/store/useSearchImagesStore";
-import InvoicePreviewTable from "../../components/InvoicePreviewTable.vue";
+import useGetSellers from "@/features/searchImages/composables/useGetSellers";
+import useSearchImagesStore from "@/features/searchImages/store/useSearchImagesStore";
+import InvoicePreviewTable from "@/features/newInvoice/components/InvoicePreviewTable.vue";
 import InvoiceTotalHighlighted from "../../components/InvoiceTotalHighlighted.vue";
 import useCreateInvoice from "../../composables/useCreateInvoice";
-import useNewInvoiceStore from "../../store/useNewInvoiceStore";
+import useNewInvoiceStore from "@/features/newInvoice/store/useNewInvoiceStore";
 import NewInvoiceGeneralInformation from "./components/NewInvoiceGeneralInformation.vue";
 
 const sellers = useGetSellers();

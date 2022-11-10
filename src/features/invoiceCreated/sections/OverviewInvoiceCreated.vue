@@ -24,7 +24,7 @@ const onResetAll = () => {
 };
 </script>
 <template>
-  <section class="mx-8 sm:flex flex-col sm:mx-auto sm:w-3/4 lg:w-5/12 mb-8">
+  <section class="invoice-detail z-10 relative">
     <SummaryCard
       :client="invoice?.client"
       :date="invoice?.date"
@@ -53,3 +53,8 @@ const onResetAll = () => {
     </CardBox>
   </section>
 </template>
+<style lang="scss" scoped>
+.invoice-detail {
+  @apply mx-8 sm:flex flex-col sm:mx-auto sm:w-3/4 lg:w-5/12 mb-8;
+}
+</style>

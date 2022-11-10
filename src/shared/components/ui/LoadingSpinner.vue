@@ -1,6 +1,6 @@
 <script lang="ts" setup></script>
 <template>
-  <div class="spinner"></div>
+  <div class="spinner" role="progressbar" aria-label="Loading"></div>
 </template>
 <style lang="scss" scoped>
 .spinner {

@@ -3,6 +3,7 @@ import useTranslation from "@/shared/composables/useTranslation";
 import useNewInvoiceStore from "../store/useNewInvoiceStore";
 import { FolderOutline } from "mdue";
 import useSearchImagesStore from "@/features/searchImages/store/useSearchImagesStore";
+
 const newInvoice = useNewInvoiceStore();
 const searchImages = useSearchImagesStore();
 const t = useTranslation();
