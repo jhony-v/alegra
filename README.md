@@ -119,12 +119,12 @@ $ npm run build
 
 ## Consideraciones 🙌
 
-- Los sistemas de API cuentan con un sistema que captura datos que son falsos por motivos de prueba y ciertas restricciones al integrar el API.
+- Los sistemas de API cuentan con un sistema que captura datos falsos, esto es por motivos de prueba y ciertas restricciones al integrar el API que bloqueaban ⚠️ el acceso a los clientes 😿. A pesar de aquello la infraestructura está lista para el uso de los servicios sin mayor dificultad.
 - La arquitectura de la aplicación esta basada en un modelo escalable que permite la incorporación de nuevas funcionalidades y manteniblidad en el futuro.
 - Las variables de entorno fueron subidas al repositorio en caso de querer realizarse las pruebas de manera local.
 - Correo y contraseña de la cuenta de Alegra:
-  - **jhonyvega.dev@gmail.com**
-  - **jhonyvegadev**
+  - Email: **jhonyvega.dev@gmail.com**
+  - Contraseña: **jhonyvegadev**
 
 ## Funcionalidades desarrolladas 💻
 
@@ -135,3 +135,7 @@ $ npm run build
 - [x] Permitir crear una nueva factura por el vendedor ganador.
 - [x] Asociar un cliente y seleccionar productos.
 - [x] Mostrar factura creada.
+
+##
+
+#### **_💫😊 Gracias por el reto!, disfruté mucho desarrollando la aplicación, espero que sea de su agrado navegando y espero con ansias formar parte de Alegra 😊💫_**
