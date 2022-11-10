@@ -18,7 +18,7 @@ const t = useTranslation();
   <section v-else-if="store.error">
     <h1>{{ t("error.gettingImages") }}</h1>
   </section>
-  <section velse class="seller-images">
+  <section v-else class="seller-images">
     <SellerCard
       v-for="seller in sellers"
       :key="seller.id"
