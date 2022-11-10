@@ -1,3 +1,4 @@
+import Logger, { LOGGER_ERROR } from "@/core/lib/logger";
 import axios from "axios";
 import { encode } from "js-base64";
 import {
@@ -16,6 +17,21 @@ export const alegraApi = axios.create({
   },
 });
 
+alegraApi.interceptors.response.use(
+  (response) => response,
+  interceptErrorResponse
+);
+
 export const googleImagesApi = axios.create({
   baseURL: googleImageApiUrl,
 });
+
+googleImagesApi.interceptors.response.use(
+  (response) => response,
+  interceptErrorResponse
+);
+
+function interceptErrorResponse<T>(error: T) {
+  Logger.error(LOGGER_ERROR.NETWORK_ERROR, error);
+  return Promise.reject(error);
+}

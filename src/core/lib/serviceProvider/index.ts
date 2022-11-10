@@ -1,9 +1,8 @@
 import type { Services } from "@/core/services";
 import services from "@/core/services";
 import { provide, inject, defineComponent } from "vue";
-import type { InjectionKey } from "vue";
 
-const serviceKey = Symbol() as InjectionKey<Services>;
+const serviceKey = "service";
 
 export const ServiceProvider = defineComponent({
   setup(_props, { slots }) {
