@@ -5,6 +5,7 @@ export function useChangeLanguage() {
   const { locale } = useI18n({ useScope: "global" });
   const change = (language: Languages) => {
     locale.value = language;
+    localStorage.setItem("lang", language);
   };
   return {
     change,

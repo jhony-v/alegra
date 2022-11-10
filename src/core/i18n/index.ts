@@ -6,7 +6,7 @@ import { LANGUAGE } from "./languages";
 const i18n = createI18n({
   legacy: false,
   fallbackLocale: LANGUAGE.es,
-  locale: LANGUAGE.es,
+  locale: localStorage.getItem("lang") || LANGUAGE.es,
   messages: {
     es,
     en,
