@@ -1,4 +1,4 @@
-import { useServices } from "@/core/lib/serviceProvider";
+import { useServices } from "@/core/lib/service";
 import useMountOnce from "@/shared/composables/useMountOnce";
 import useApplicationStore from "../store/useApplicationStore";
 

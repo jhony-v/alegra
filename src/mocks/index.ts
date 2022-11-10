@@ -1,6 +1,7 @@
 import type { PublicImage, Seller } from "@/core/models/seller";
 import type { Product } from "@/core/models/product";
 import type { NewInvoiceCreatedResponse } from "@/core/models/invoice";
+import type { Customer } from "@/core/models/customer";
 
 export const sellers: Seller[] = [
   {
@@ -117,6 +118,54 @@ export const products: Product[] = [
       "https://i.linio.com/p/7d7f604618a2b2e1de7559916efb8285-catalog.webp",
     name: "Audifonos Gamer",
     price: 89,
+  },
+];
+
+export const customers: Customer[] = [
+  {
+    id: 1,
+    name: "Acrecer",
+    identification: "963.654.988",
+    email: "prueba2@alegra.com",
+    phonePrimary: "111 11 11",
+    phoneSecondary: "",
+    fax: "",
+    mobile: "(333) 555-55-55",
+    observations: "",
+    address: {
+      address: "Avenida Madison",
+      city: "New York, USA",
+    },
+  },
+  {
+    id: 2,
+    name: "Marcos",
+    identification: "963.654.988",
+    email: "marcos@alegra.com",
+    phonePrimary: "111 11 11",
+    phoneSecondary: "",
+    fax: "",
+    mobile: "(333) 555-55-55",
+    observations: "",
+    address: {
+      address: "Avenida Madison",
+      city: "New York, USA",
+    },
+  },
+  {
+    id: 3,
+    name: "Carlos",
+    identification: "963.654.988",
+    email: "carlos.20@alegra.com",
+    phonePrimary: "111 11 11",
+    phoneSecondary: "",
+    fax: "",
+    mobile: "(333) 555-55-55",
+    observations: "",
+    address: {
+      address: "Avenida Madison",
+      city: "Lima, PE",
+    },
   },
 ];
 

@@ -1,15 +1,25 @@
 <script setup lang="ts">
 import useTranslation from "@/shared/composables/useTranslation";
 import useNewInvoiceStore from "@/features/newInvoice/store/useNewInvoiceStore";
+import FormInputDataList from "@/shared/components/ui/FormInputDataList.vue";
+import useFindAllCustomers from "@/shared/composables/useFindAllCustomers";
+import type { Customer } from "@/core/models/customer";
 
-const newInvoice = useNewInvoiceStore();
 const t = useTranslation();
+const newInvoice = useNewInvoiceStore();
+const findCustomers = useFindAllCustomers();
 </script>
 <template>
   <div class="wrapper">
     <div class="field">
       <label>{{ t("newInvoice.client") }}</label>
-      <input v-model="newInvoice.invoice.client.id" />
+      <FormInputDataList
+        v-model:term="findCustomers.term"
+        v-model="newInvoice.invoice.client.id"
+        :options="findCustomers.data"
+        :render-id="(item: Customer) => item.id"
+        label="name"
+      />
     </div>
     <div class="field">
       <label>{{ t("newInvoice.currency") }}</label>

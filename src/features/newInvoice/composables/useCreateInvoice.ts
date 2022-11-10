@@ -1,4 +1,4 @@
-import { useServices } from "@/core/lib/serviceProvider";
+import { useServices } from "@/core/lib/service";
 import type { CreateNewInvoice } from "@/core/models/invoice";
 import useSearchImagesStore from "@/features/searchImages/store/useSearchImagesStore";
 import { useRouter } from "vue-router";

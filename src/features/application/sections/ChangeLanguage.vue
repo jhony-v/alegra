@@ -19,7 +19,7 @@ const toggleLanguage = () => {
 </script>
 <template>
   <button
-    class="flex items-center gap-2 font-bold bg-primary-light rounded-xl text-sm px-4 py-2"
+    class="flex items-center gap-2 font-bold bg-primary-light rounded-xl text-sm p-1 md:px-4 md:py-2"
     @click="toggleLanguage"
     tabindex="-1"
   >

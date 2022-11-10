@@ -1,4 +1,4 @@
-import { useServices } from "@/core/lib/serviceProvider";
+import { useServices } from "@/core/lib/service";
 import useSearchImagesStore from "@/features/searchImages/store/useSearchImagesStore";
 import { ref } from "vue";
 

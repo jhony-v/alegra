@@ -1,4 +1,4 @@
-import { useServices } from "@/core/lib/serviceProvider";
+import { useServices } from "@/core/lib/service";
 import type { SellerImage } from "@/core/models/seller";
 import useSearchImagesStore from "@/features/searchImages/store/useSearchImagesStore";
 import useMountOnce from "@/shared/composables/useMountOnce";
