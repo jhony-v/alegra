@@ -29,6 +29,10 @@ const useNewInvoiceStore = defineStore("newInvoice", {
   },
   getters: {
     existsInvoiceCreated: (state) => state.invoiceCreated !== null,
+    hasChosenItems: (state) => state.invoice.items.length > 0,
+    canSubmit(): boolean {
+      return this.hasChosenItems && this.invoice.client.id > 0;
+    },
   },
   actions: {
     toggleShowNewInvoice() {

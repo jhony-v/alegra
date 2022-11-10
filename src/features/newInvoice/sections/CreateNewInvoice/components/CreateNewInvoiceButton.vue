@@ -8,7 +8,11 @@ const store = useNewInvoiceStore();
 const t = useTranslation();
 </script>
 <template>
-  <PrimaryButton type="submit" :title="t('common.create')">
+  <PrimaryButton
+    :disabled="!store.canSubmit"
+    type="submit"
+    :title="t('common.create')"
+  >
     {{ t("common.create") }} {{ t("invoice") }}
     <div class="ml-2" v-if="store.creatingInvoice">
       <LoadingSpinner />

@@ -20,7 +20,7 @@ const application = useApplicationStore();
 const t = useTranslation();
 </script>
 <template>
-  <form @submit.prevent="create">
+  <form @submit.prevent="create" tabindex="0">
     <SubtitleText>{{ t("sellerScores") }}</SubtitleText>
     <InvoicePreviewTable :sellers="sellers" />
     <InvoiceTotalHighlighted

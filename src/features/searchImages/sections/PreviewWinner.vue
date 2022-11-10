@@ -25,7 +25,9 @@ const t = useTranslation();
         {{ t("openFullScreen") }}
       </router-link>
       <Suspense>
-        <CreateNewInvoice class="fade-up">
+        <CreateNewInvoice
+          class="fade-up overflow-y-auto md:h-96 p-2 outline-none"
+        >
           <template #actions>
             <HideCreateNewInvoiceButton />
             <CreateNewInvoiceButton />

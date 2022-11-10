@@ -11,6 +11,8 @@ export default function useCreateInvoice() {
   const services = useServices();
 
   const create = async () => {
+    if (!newInvoice.canSubmit) return;
+
     const invoice = newInvoice.invoice;
     const winningSeller = searchImage.winningSeller;
     try {
