@@ -1,5 +1,5 @@
-import { products } from "@/mocks";
+import { importServiceMock } from "@/mocks/utils";
 
 export const getAllProducts = async () => {
-  return { data: products };
+  return importServiceMock(() => import("@/mocks/products.mock"));
 };

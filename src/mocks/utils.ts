@@ -3,6 +3,13 @@ import type {
   NewInvoiceCreatedResponse,
 } from "@/core/models/invoice";
 
+export async function importServiceMock(mock: () => Promise<{ default: any }>) {
+  const response = await mock();
+  return {
+    data: response.default,
+  };
+}
+
 export function mockResponseCreateNewInvoice(
   response: NewInvoiceCreatedResponse,
   payload: CreateNewInvoice

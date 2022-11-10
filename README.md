@@ -129,12 +129,29 @@ $ npm run build
 ## Consideraciones 🙌
 
 - Google Images API no permite traer imagenes de cliente, por ese motivo se uso la api de [Unsplash](https://unsplash.com/) con la misma funcionalidad [https://unsplash.com/developers](https://unsplash.com/developers).
-- Los sistemas de API de Alegra cuentan con un sistema que captura datos falsos, esto es por motivos de prueba y ciertas restricciones a los clientes frontend distintos al dominio😿. A pesar de aquello la infraestructura está lista para el uso de los servicios sin mayor dificultad.
+
+- El API de Alegra bloquea peticiones de un dominio externo de cliente 🙁, es por ese motivo que se usó [ChanceJs](https://chancejs.com/) para simular datos reales y son cargados asincronamente con el fin de no afectar el rendimiento.
+
+  Código de ejemplo:
+
+  ```ts
+  import { alegraApi } from "@/config/api";
+  import type { Seller } from "@/core/models/seller";
+  import { importServiceMock } from "@/mocks/utils";
+
+  export const getAllSellers = async () => {
+    try {
+      return await alegraApi.get<Seller[]>("/v1/seller");
+    } catch {
+      // returning async mock data
+      return importServiceMock(() => import("@/mocks/sellers.mock"));
+    }
+  };
+  ```
+
 - La arquitectura de la aplicación esta basada en un modelo escalable que permite la incorporación de nuevas funcionalidades y manteniblidad en el futuro.
+
 - Las variables de entorno fueron subidas al repositorio en caso de querer realizarse las pruebas de manera local.
-- Correo y contraseña de la cuenta de Alegra:
-  - Email: **jhonyvega.dev@gmail.com**
-  - Contraseña: **jhonyvegadev**
 
 ## Funcionalidades desarrolladas 💻
 

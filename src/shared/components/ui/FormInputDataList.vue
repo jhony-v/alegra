@@ -1,9 +1,8 @@
 <script lang="ts" setup>
-import { computed, ref, watch } from "vue";
+import { ref, watch } from "vue";
 import "vue-select/dist/vue-select.css";
 //@ts-ignore
 import VueSelect from "vue-select";
-import { customers } from "@/mocks";
 
 const props = defineProps({
   options: {
@@ -27,10 +26,6 @@ const props = defineProps({
   },
 });
 
-const normalizeOptions = computed(() => {
-  return customers;
-});
-
 const emit = defineEmits(["update:modelValue", "update:term"]);
 const local = ref(props.modelValue);
 
@@ -49,7 +44,7 @@ watch(local, (value) => {
       :label="label"
       :reduce="renderId"
       @search="onSearch"
-      :options="normalizeOptions"
+      :options="options"
     />
   </div>
 </template>
